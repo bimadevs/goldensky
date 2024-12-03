@@ -2,12 +2,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import Home from './pages/Home';
 import { Portfolio } from './pages/Portfolio';
-import { Services } from './pages/Services';
+// import { Services } from './pages/Services';
 // import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { Footer } from './components/Footer';
 import { Blog } from './pages/Blog';
 import ScrollTop from './components/ScrollTop';
+import { WhatsAppButton } from './components/WhatsAppButton';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
         </Routes>
+        <WhatsAppButton />
         <Footer />
       </div>
     </Router>

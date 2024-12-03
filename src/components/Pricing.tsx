@@ -13,6 +13,7 @@ export const Pricing = () => {
         "Gratis Hosting",
         "Gratis Domain (my.id, biz.id, web.id)",
       ],
+      link: "https://wa.link/v8lwui",
       cta: "Pesan Sekarang",
     },
     {
@@ -25,6 +26,7 @@ export const Pricing = () => {
         "Gratis Hosting",
         "Gratis Domain (my.id, biz.id, web.id)",
       ],
+      link: "https://wa.link/xfvgd1",
       cta: "Pesan Sekarang",
     },
     // {
@@ -82,10 +84,12 @@ export const Pricing = () => {
                   </li>
                 ))}
               </ul>
-              <button className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[rgba(255,215,0,.5)] text-white rounded-full hover:bg-[#FFD700] transition-colors">
-                <ShoppingCart className="w-5 h-5" />
-                {plan.cta}
-              </button>
+              <a href={plan.link} target='__blank'>
+                <button className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[rgba(255,215,0,.5)] text-white rounded-full hover:bg-[#FFD700] transition-colors">
+                  <ShoppingCart className="w-5 h-5" />
+                  {plan.cta}
+                </button>
+              </a>
             </motion.div>
           ))}
         </div>

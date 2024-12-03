@@ -35,7 +35,7 @@ export const stats: Stat[] = [
   {
     id: '1',
     label: 'Happy Clients',
-    value: '10+',
+    value: '100+',
     icon: Users
   },
   // {
@@ -53,7 +53,7 @@ export const stats: Stat[] = [
   {
     id: '3',
     label: `People Love's`,
-    value: '10+',
+    value: '100+',
     icon: Heart
   }
 ];

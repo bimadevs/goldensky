@@ -10,15 +10,69 @@ export const projects: Project[] = [
     technologies: ['React', 'TypeScript', 'Tailwind CSS'],
     link: '#'
   },
-  // {
-  //   id: '2',
-  //   title: 'Elegant Wedding Suite',
-  //   category: 'undangan',
-  //   image: 'https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?auto=format&fit=crop&q=80&w=1280',
-  //   description: 'Digital wedding invitation suite with RSVP system and guest management.',
-  //   technologies: ['Design', 'Animation', 'Interactive Elements'],
-  //   link: '#'
-  // },
+  {
+    id: '2',
+    title: 'Elegant Wedding Suite',
+    category: 'undangan',
+    image: '/images/Portofolio/LUXURY(7).PNG',
+    description: 'Undangan digital yang responsive dengan animasi dan desain yang menarik',
+    technologies: ['Design', 'Animation', 'Interactive Elements'],
+    link: '#'
+  },
+  {
+    id: '3',
+    title: 'Elegant Wedding Suite',
+    category: 'undangan',
+    image: '/images/Portofolio/WTC(1).PNG',
+    description: 'Undangan digital yang responsive dengan animasi dan desain yang menarik',
+    technologies: ['Design', 'Animation', 'Interactive Elements'],
+    link: '#'
+  },
+  {
+    id: '4',
+    title: 'Elegant Wedding Suite',
+    category: 'undangan',
+    image: '/images/Portofolio/WTC(3).PNG',
+    description: 'Undangan digital yang responsive dengan animasi dan desain yang menarik',
+    technologies: ['Design', 'Animation', 'Interactive Elements'],
+    link: '#'
+  },
+  {
+    id: '5',
+    title: 'Elegant Wedding Suite',
+    category: 'undangan',
+    image: '/images/Portofolio/WTC(9).PNG',
+    description: 'Undangan digital yang responsive dengan animasi dan desain yang menarik',
+    technologies: ['Design', 'Animation', 'Interactive Elements'],
+    link: '#'
+  },
+  {
+    id: '6',
+    title: 'Elegant Wedding Suite',
+    category: 'undangan',
+    image: '/images/Portofolio/PREVIEW(115).JPG',
+    description: 'Undangan digital yang responsive dengan animasi dan desain yang menarik',
+    technologies: ['Design', 'Animation', 'Interactive Elements'],
+    link: '#'
+  },
+  {
+    id: '7',
+    title: 'Elegant Wedding Suite',
+    category: 'undangan',
+    image: '/images/Portofolio/PREVIEW(119).JPG',
+    description: 'Undangan digital yang responsive dengan animasi dan desain yang menarik',
+    technologies: ['Design', 'Animation', 'Interactive Elements'],
+    link: '#'
+  },
+  {
+    id: '8',
+    title: 'Elegant Wedding Suite',
+    category: 'undangan',
+    image: '/images/Portofolio/PREVIEW(135).JPG',
+    description: 'Undangan digital yang responsive dengan animasi dan desain yang menarik',
+    technologies: ['Design', 'Animation', 'Interactive Elements'],
+    link: '#'
+  },
   // {
   //   id: '3',
   //   title: 'Brand Identity System',
