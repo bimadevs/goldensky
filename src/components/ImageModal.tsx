@@ -23,7 +23,7 @@ export const ImageModal = ({ imageUrl, isOpen, onClose }: ImageModalProps) => {
             animate={{ scale: 1 }}
             exit={{ scale: 0.5 }}
             src={imageUrl}
-            alt="Portfolio item"
+            alt="portofolio item"
             className="max-h-[90vh] max-w-[90vw] object-contain"
             onClick={(e) => e.stopPropagation()}
           />

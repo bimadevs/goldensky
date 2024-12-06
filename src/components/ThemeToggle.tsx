@@ -1,21 +1,27 @@
-import React from 'react';
-import { Sun, Moon } from 'lucide-react';
-import { useTheme } from '../hooks/useTheme';
+import { motion } from 'framer-motion';
 
-export const ThemeToggle = () => {
-  const { theme, toggleTheme } = useTheme();
+interface TeamMemberProps {
+  image: string;
+  name: string;
+  role: string;
+}
 
+export default function TeamMember({ image, name, role }: TeamMemberProps) {
   return (
-    <button
-      onClick={toggleTheme}
-      className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-      aria-label="Toggle theme"
+    <motion.div
+      whileHover={{ y: -5 }}
+      className="group relative overflow-hidden rounded-lg bg-gray-800/50"
     >
-      {theme === 'dark' ? (
-        <Sun className="w-5 h-5" />
-      ) : (
-        <Moon className="w-5 h-5" />
-      )}
-    </button>
+      <img
+        src={image}
+        alt={name}
+        className="h-64 w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+      <div className="absolute bottom-0 w-full p-6">
+        <h4 className="text-xl font-semibold text-white">{name}</h4>
+        <p className="text-yellow-400">{role}</p>
+      </div>
+    </motion.div>
   );
-};
+}

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Check, ShoppingCart } from 'lucide-react';
+import AboutScene3D from './AboutScene3D';
 
 export const Pricing = () => {
   const pricingPlans = [
@@ -43,8 +44,10 @@ export const Pricing = () => {
   ];
 
   return (
-    <div id='pricing' className="relative bg-gradient-to-b from-sky-100 to-yellow-50 dark:from-gray-900 dark:to-gray-800 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div id='pricing' className=" relative bg-gray-900 py-24 overflow-hidden">
+      <AboutScene3D />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

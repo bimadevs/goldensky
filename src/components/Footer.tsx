@@ -25,8 +25,8 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/portfolio" className="hover:text-yellow-400 transition-colors">
-                  Portfolio
+                <Link to="/portofolio" className="hover:text-yellow-400 transition-colors">
+                  portofolio
                 </Link>
               </li>
               {/* <li>
