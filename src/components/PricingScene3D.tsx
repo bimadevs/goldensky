@@ -26,7 +26,7 @@ function AnimatedShapes() {
             distort={0.3}
             speed={2}
             roughness={0}
-            metalness={1}
+            metalness={0.9}
             clearcoat={1}
             clearcoatRoughness={0.1}
           />
@@ -41,7 +41,7 @@ function AnimatedShapes() {
             distort={0.3}
             speed={2}
             roughness={0}
-            metalness={1}
+            metalness={0.9}
             clearcoat={1}
             clearcoatRoughness={0.1}
           />
