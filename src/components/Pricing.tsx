@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import { Check, ShoppingCart } from 'lucide-react';
+import PricingScene3D from './PricingScene3D';
 
 export const Pricing = () => {
-  const pricingPlans = [
+  const plans = [
     {
-      title: "Pembuatan Website",
+      name: "Pembuatan Website",
       price: "Start from Rp250.000",
       features: [
         "Desain website modern & responsive",
@@ -15,9 +16,10 @@ export const Pricing = () => {
       ],
       link: "https://wa.link/v8lwui",
       cta: "Pesan Sekarang",
+      popular : true
     },
     {
-      title: "Website Undangan",
+      name: "Website Undangan",
       price: "Start from Rp.99.000",
       features: [
         "Animation",
@@ -30,7 +32,7 @@ export const Pricing = () => {
       cta: "Pesan Sekarang",
     },
     // {
-    //   title: "Premium",
+    //   name: "Premium",
     //   price: "Rp5.000.000",
     //   features: [
     //     "Desain website custom",
@@ -43,57 +45,81 @@ export const Pricing = () => {
   ];
 
   return (
-    <div id='pricing' className="relative bg-gradient-to-b from-sky-100 to-yellow-50 dark:from-gray-900 dark:to-gray-800 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="pricing" className="relative bg-gray-900 py-24 overflow-hidden">
+      <PricingScene3D />
+      
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-500 to-yellow-500 bg-clip-text text-transparent mb-4">
-            Paket Harga
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Simple, Transparent <span className="text-yellow-400">Pricing</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Pilih paket yang sesuai dengan kebutuhan Anda, dan biarkan kami membantu Anda tampil online dengan profesional.
+          <p className="mt-4 text-lg text-gray-300">
+            Choose the perfect plan for your business needs
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {pricingPlans.map((plan, index) => (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2"
+        >
+          {plans.map((plan) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              key={plan.name}
+              whileHover={{ scale: 1.02, y: -5 }}
+              className={`relative rounded-2xl bg-gray-800/50 p-8 backdrop-blur-lg ${
+                plan.popular ? 'ring-2 ring-yellow-400' : ''
+              }`}
             >
-              <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4 text-center">
-                {plan.title}
-              </h3>
-              <p className="text-4xl font-bold text-sky-500 mb-4 text-center">
-                {plan.price}
-              </p>
-              <ul className="mb-6">
-                {plan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-gray-600 dark:text-gray-300 mb-2">
-                    <Check className="w-5 h-5 text-yellow-500" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <a href={plan.link} target='__blank'>
-                <button className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[rgba(255,215,0,.5)] text-white rounded-full hover:bg-[#FFD700] transition-colors">
-                  <ShoppingCart className="w-5 h-5" />
-                  {plan.cta}
-                </button>
-              </a>
+              {plan.popular && (
+                <div className="absolute -top-4 left-0 right-0 mx-auto w-32 rounded-full bg-yellow-400 px-3 py-1 text-center text-sm font-semibold text-black">
+                  Most Popular
+                </div>
+              )}
+              
+              <div className="text-center">
+                <h3 className="text-xl font-semibold text-white">{plan.name}</h3>
+                <div className="mt-4 flex items-baseline justify-center">
+                  {/* <span className="text-4xl font-bold text-yellow-400">$</span> */}
+                  <span className="text-5xl font-bold tracking-tight text-white">
+                    {plan.price}
+                  </span>
+                </div>
+                <ul className="mt-8 mb-8 space-y-4 text-left">
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-center">
+                      <Check className="h-5 w-5 text-yellow-400" />
+                      <span className="ml-3 text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <motion.div
+                onClick={() => {
+                  window.open(plan.link, '_blank');
+                }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`mt-8 hover:cursor-pointer w-full rounded-full px-4 py-2 text-lg font-semibold transition-colors ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-yellow-500 to-yellow-400 text-black hover:from-yellow-400 hover:to-yellow-300'
+                      : 'border-2 border-yellow-400 text-white hover:bg-yellow-400/10'
+                  }`}
+                >
+                  Pesan Sekarang
+                </motion.div>
+              </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
-};
+}

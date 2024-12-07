@@ -6,7 +6,7 @@ import { ImageModal } from './ImageModal';
 
 const categories = ['all', 'web', 'undangan', 'graphic'] as const;
 
-export const PortfolioGrid = () => {
+export const PortofolioGrid = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [activeCategory, setActiveCategory] = useState<'all' | 'web' | 'undangan' | 'graphic'>('all');
 
