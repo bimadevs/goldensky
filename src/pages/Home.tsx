@@ -1,14 +1,14 @@
 import  Hero  from '../components/Hero'
 import { Pricing } from '../components/Pricing'
 import  About  from '../components/About'
-import { Services } from '../components/Services'
+// import { Services } from '../components/Services'
 
 const Home = () => {
     return (
         <>
             <Hero />
             <About />
-            <Services />
+            {/* <Services /> */}
             <Pricing />
         </>
     )
