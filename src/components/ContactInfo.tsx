@@ -31,24 +31,24 @@ export const ContactInfo = () => {
             <detail.icon className="w-6 h-6 text-sky-500" />
           </div>
           <div>
-            <h3 className="text-lg font-medium text-gray-900 dark:text-white">{detail.title}</h3>
+            <h3 className="text-lg font-medium text-white">{detail.title}</h3>
             {detail.link ? (
               <a
                 href={detail.link}
-                className="text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400"
+                className="text-gray-300 hover:text-sky-400"
               >
                 {detail.content}
               </a>
             ) : (
-              <p className="text-gray-600 dark:text-gray-300">{detail.content}</p>
+              <p className="text-gray-300">{detail.content}</p>
             )}
           </div>
         </div>
       ))}
 
-      <div className="mt-8 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-        <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4">Jam Kerja</h3>
-        <div className="space-y-2 text-gray-600 dark:text-gray-300">
+      <div className="mt-8 p-6 bg-gray-800 rounded-xl shadow-lg">
+        <h3 className="text-lg font-medium text-white mb-4">Jam Kerja</h3>
+        <div className="space-y-2 text-gray-300">
           <p>Setiap hari : 08.00 WIB - 21.00 WIB</p>
         </div>
       </div>

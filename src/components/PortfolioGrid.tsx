@@ -26,7 +26,7 @@ export const PortofolioGrid = () => {
               className={`px-6 py-2 rounded-full capitalize transition-colors ${
                 activeCategory === category
                   ? 'bg-sky-500 text-white'
-                  : 'bg-gray-100 dark:bg-gray-800 hover:bg-sky-100 dark:hover:bg-gray-700'
+                  : 'bg-gray-800 hover:bg-gray-700'
               }`}
             >
               {category}
@@ -42,7 +42,7 @@ export const PortofolioGrid = () => {
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+                className="bg-gray-800 rounded-lg overflow-hidden shadow-lg"
               >
                 <div 
                   className="cursor-pointer" 
@@ -59,12 +59,12 @@ export const PortofolioGrid = () => {
                   {/* <span className="inline-block px-3 py-1 text-sm bg-sky-100 dark:bg-sky-900 text-sky-700 dark:text-sky-300 rounded-full mb-3">
                     {project.category}
                   </span> */}
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
+                  <p className="text-gray-300 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies?.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full"
+                        className="px-3 py-1 text-sm bg-gray-700 text-gray-300 rounded-full"
                       >
                         {tech}
                       </span>
@@ -74,7 +74,7 @@ export const PortofolioGrid = () => {
               </motion.div>
             ))}          </div>
         ) : (
-          <div className="text-center text-gray-600 dark:text-gray-300 mt-8">
+          <div className="text-center text-gray-300 mt-8">
             <p className="text-lg font-semibold">Jadilah yang pertama dalam produk ini</p>
           </div>
         )}
@@ -95,7 +95,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      className="group relative overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-lg"
+      className="group relative overflow-hidden rounded-xl bg-gray-800 shadow-lg"
     >
       <div className="aspect-video overflow-hidden">
         <img
@@ -106,12 +106,12 @@ const ProjectCard = ({ project }: { project: Project }) => {
       </div>
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
+        <p className="text-gray-300 mb-4">{project.description}</p>
         <div className="flex flex-wrap gap-2">
           {project.technologies?.map((tech) => (
             <span
               key={tech}
-              className="px-3 py-1 text-sm bg-sky-100 dark:bg-sky-900 text-sky-700 dark:text-sky-300 rounded-full"
+              className="px-3 py-1 text-sm bg-sky-900 text-sky-300 rounded-full"
             >
               {tech}
             </span>
