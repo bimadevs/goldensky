@@ -25,7 +25,7 @@ export const Navbar = () => {
     >
       <div className="relative">
         {/* Glassmorphism background */}
-        <div className="absolute inset-0 bg-sky-500 dark:bg-gray-900/70 backdrop-blur-md" />
+        <div className="absolute inset-0 bg-gray-900/70 backdrop-blur-md" />
         
         {/* Animated border gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-sky-500/50 to-transparent" />
@@ -51,7 +51,7 @@ export const Navbar = () => {
               {/* <ThemeToggle /> */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="ml-2 p-2 rounded-md text-gray-700 dark:text-gray-200
+                className="ml-2 p-2 rounded-md text-gray-200
                   hover:bg-white/10 transition-colors duration-200"
               >
                 <motion.div

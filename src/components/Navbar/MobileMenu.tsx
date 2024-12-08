@@ -16,7 +16,7 @@ export const MobileMenu = ({ isOpen, navItems, onClose }: MobileMenuProps) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.2 }}
-          className="md:hidden absolute top-full left-0 right-0 z-50 backdrop-blur-lg bg-sky-600 dark:bg-gray-900/90 border-b border-gray-200 dark:border-gray-800"
+          className="md:hidden absolute top-full left-0 right-0 z-50 backdrop-blur-lg bg-gray-900/90 border-b border-gray-800"
         >
           <nav className="px-4 py-2 space-y-1">
             {navItems.map((item) => (

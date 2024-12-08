@@ -36,7 +36,7 @@ export const Services = () => {
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-500 to-yellow-500 bg-clip-text text-transparent mb-4">
             Layanan Kami
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Jelajahi layanan terbaik kami untuk memenuhi kebutuhan digital Anda.
           </p>
         </motion.div>
@@ -49,15 +49,15 @@ export const Services = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
             >
               <div className="flex items-center justify-center mb-6">
                 {service.icon}
               </div>
-              <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4 text-center">
+              <h3 className="text-2xl font-semibold text-white mb-4 text-center">
                 {service.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-center">
+              <p className="text-gray-300 text-center">
                 {service.description}
               </p>
             </motion.div>

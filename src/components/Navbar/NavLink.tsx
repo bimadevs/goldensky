@@ -18,10 +18,10 @@ export const NavLink = ({ to, children, onClick }: NavLinkProps) => {
           'before:absolute before:inset-0 before:h-full before:w-full before:rounded-lg',
           'before:transform before:transition-all before:duration-300 before:content-[""]',
           'hover:before:scale-105 hover:before:bg-white/5',
-          'dark:text-[#FFD700]',
+          'text-[#FFD700]',
           isActive
-            ? 'text-[#FFD700] dark:text-[#FFD700] before:bg-white/10 dark:before:bg-white/5'
-            : 'text-gray-700 dark:text-gray-300'
+            ? 'text-[#FFD700] before:bg-white/5'
+            : 'text-gray-300'
         )
       }
     >
