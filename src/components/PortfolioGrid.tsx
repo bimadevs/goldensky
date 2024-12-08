@@ -18,7 +18,7 @@ export const PortofolioGrid = () => {
     <>
       <div className="py-16">
         {/* Category Buttons */}
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex justify-center align-center flex-wrap gap-4 mb-12">
           {categories.map((category) => (
             <button
               key={category}
